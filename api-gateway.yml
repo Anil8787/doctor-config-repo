@@ -2,12 +2,6 @@ server:
   port: 8080
 
 spring:
-  application:
-    name: api-gateway
-
-  config:
-    import: optional:configserver:http://localhost:8888
-
   cloud:
     gateway:
       discovery:
@@ -21,7 +15,6 @@ spring:
 
       routes:
 
-        # ================= AUTH SERVICE =================
         - id: auth-service
           uri: lb://auth-service
           predicates:
@@ -29,7 +22,6 @@ spring:
           filters:
             - StripPrefix=2
 
-        # ================= USER / PATIENT SERVICE =================
         - id: user-service
           uri: lb://user-service
           predicates:
@@ -37,7 +29,6 @@ spring:
           filters:
             - StripPrefix=2
 
-        # ================= DOCTOR SERVICE =================
         - id: doctor-service
           uri: lb://doctor-service
           predicates:
@@ -45,7 +36,6 @@ spring:
           filters:
             - StripPrefix=2
 
-        # ================= APPOINTMENT SERVICE =================
         - id: appointment-service
           uri: lb://appointment-service
           predicates:
@@ -53,7 +43,6 @@ spring:
           filters:
             - StripPrefix=2
 
-        # ================= NOTIFICATION SERVICE =================
         - id: notification-service
           uri: lb://notification-service
           predicates:
@@ -61,7 +50,6 @@ spring:
           filters:
             - StripPrefix=2
 
-# ================= EUREKA =================
 eureka:
   client:
     service-url:
@@ -69,7 +57,6 @@ eureka:
   instance:
     prefer-ip-address: true
 
-# ================= ACTUATOR =================
 management:
   endpoints:
     web:
