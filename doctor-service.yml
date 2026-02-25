@@ -21,8 +21,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 aws:
-  s3:
-    bucket:my-photo-bucket-108
   region: ap-south-1
   access-key: AKIAWFW5SMN2JDC7CJ3Z
   secret-key: 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
+  s3:
+    bucket: my-photo-bucket-108
