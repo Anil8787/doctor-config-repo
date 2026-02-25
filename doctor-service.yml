@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: doctor-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/doctor_doctor_db
     username: root
     password: Anil@5454
+
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,3 +19,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+aws:
+  s3:
+    bucket: my-photo-bucket
+  region: ap-south-1
+  access-key: YOUR_ACCESS_KEY
+  secret-key: YOUR_SECRET_KEY
