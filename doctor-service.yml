@@ -22,7 +22,7 @@ eureka:
 
 aws:
   s3:
-    bucket: my-photo-bucket
+    bucket:my-photo-bucket-108
   region: ap-south-1
-  access-key: YOUR_ACCESS_KEY
-  secret-key: YOUR_SECRET_KEY
+  access-key: AKIAWFW5SMN2JDC7CJ3Z
+  secret-key: k8ptRwHYHaDItikaZ+CbeMzJuMV+Maax7TxH+Pl9
